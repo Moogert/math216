@@ -1,0 +1,218 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{fullpage}
+\usepackage{graphics}
+
+\title{Basic Trigonometry}
+\author{DSchafer05\footnote{With much material stolen from Mildorf04}}
+
+\begin{document}
+
+\maketitle
+
+\section{Fundementals}
+
+\subsection{Trigonometric Functions}
+
+\par There are three basic trigonometric functions, sine, cosine and tangent, whose definitions can be easily observed in a right triangle.  Where $o=$ the opposite side, $a=$ the adjacent side and $h=$ the hypotenuse, 
+
+\[
+\sin{\theta} = \frac{o}{h}
+\]
+\[
+\cos{\theta} = \frac{a}{h}
+\]
+\[
+\tan{\theta} = \frac{o}{a} = \frac{sin(\theta)}{cos(\theta)}
+\]
+
+\par This is easily remembered using the acronynm SOHCAHTOA.
+
+\par The other 3 trigonometric functions, cosecant, secant and cotangent, are defined in terms of the first three.
+
+\[
+\csc{\theta} = \frac{1}{\sin{\theta}}
+\]
+\[
+\sec{\theta} = \frac{1}{\cos{\theta}}
+\]
+\[
+\cot{\theta} = \frac{\csc{\theta}}{\sec{\theta}} = \frac{\cos{\theta}}{\sin{\theta}} = \frac{1}{\tan{\theta}}
+\]
+
+\subsection{Trigonometric Values}
+
+\par The following values, derived by analyzing 30-60-90 and 45-45-90 triangles, are the basis for most of the trigonometry encountered in contest math.  It is quite important that these values be memorized completely.
+
+\begin{tabular}{lll}
+$\sin{0} = 0$ & $\cos{0} = 1$ & $\tan{0} = 0$ \\
+$\sin{\frac{\pi}{6}} = \frac{1}{2}$ & $\cos{\frac{\pi}{6}} = \frac{\sqrt{3}}{2}$ & $\tan{\frac{\pi}{6}} = \frac{1}{\sqrt{3}}$ \\
+$\sin{\frac{\pi}{4}} = \frac{\sqrt{2}}{2}$ & $\cos{\frac{\pi}{4}} = \frac{\sqrt{2}}{2}$ & $\tan{\frac{\pi}{4}} = 1$ \\
+$\sin{\frac{\pi}{3}} = \frac{\sqrt{3}}{2}$ & $\cos{\frac{\pi}{3}} = \frac{1}{2}$ & $\tan{\frac{\pi}{3}} = \sqrt{3}$ \\
+$\sin{\frac{\pi}{2}} = 1$ & $\cos{\frac{\pi}{2}} = 0$ & $\tan{\frac{\pi}{2}} = \infty$ \\
+\end{tabular}
+
+\subsection{Simple Trigonometric Identities}
+
+\par The basic identities given here allow any trigonometric functions to be evaluated, as long as $\theta | \frac{\pi}{6}$.
+
+\begin{tabular}{ll}
+$\sin{(\frac{\pi}{2}-\theta)} = \cos{\theta}$ & $\cos{(\frac{\pi}{2}-\theta)} = \sin{\theta}$ \\
+$\sin{(-\theta)} = -\sin{\theta}$ & $\cos{(-\theta)} = \cos{\theta}$ \\
+$\sin{(\pi-\theta)} = \sin{\theta}$ & $\cos{(\pi-\theta)} = -\cos{\theta}$ \\
+$\sin^2{\theta} + \cos^2{\theta} = 1$ & \\
+\end{tabular}
+
+\section{Advanced Computational Concepts}
+
+\subsection{Addition and Subtraction Formulae}
+
+\par To derive the values of the trigonometric functions for different $\theta$, it is neccessary to use addition and subtraction formulae.  These formulae are extremely important, and are well worth memorizing.
+
+\[
+\sin{(\theta + \phi)} = \sin{\theta}\cos{\phi} + \cos{\theta}\sin{\phi}
+\]
+\[
+\cos{(\theta + \phi)} = \cos{\theta}\cos{\phi} - \sin{\theta}\sin{\phi}
+\]
+\[
+\tan{(\theta + \phi)} = \frac{\tan(\theta) + \tan(\phi)}{1-\tan{\theta}\tan{\phi}}
+\]
+
+\par Using the Simple Trigonometric Identities above, Subtraction Formulae can also be derived.  These are listed here for reference.
+
+\[
+\sin{(\theta - \phi)} = \sin{\theta}\cos{\phi} - \cos{\theta}\sin{\phi}
+\]
+\[
+\cos{(\theta - \phi)} = \cos{\theta}\cos{\phi} + \sin{\theta}\sin{\phi}
+\]
+\[
+\tan{(\theta - \phi)} = \frac{\tan(\theta) - \tan(\phi)}{1+\tan{\theta}\tan{\phi}}
+\]
+
+\subsection{Double-Angle and Half-Angle Formulae}
+
+\par The Double-Angle formulae are created directly from the Addition Formulae above, setting $\theta = \phi$.
+
+\[
+\sin{(2\theta)} = 2\sin{\theta}\cos{\theta}
+\]
+\[
+\cos{(2\theta)} = \cos^2{\theta} - \sin^2{\theta}
+\]
+\[
+\tan{(2\theta)} = \frac{2\tan{\theta}}{1-\tan^2{\theta}}
+\]
+
+\par These formulae are used to derive the half-angle formulae.
+
+\[
+\sin{\frac{\theta}{2}} = \pm\sqrt{\frac{1-\cos^2{(2\theta)}}{2}}
+\]
+\[
+\cos{\frac{\theta}{2}} = \pm\sqrt{\frac{1+\cos^2{(2\theta)}}{2}}
+\]
+\[
+\tan{\frac{\theta}{2}} = \pm\frac{\sin{\theta}}{1+\cos{\theta}}
+\]
+
+\subsection{Sum-Product Formulae}
+
+\par These formulae are usually not needed for trigonometry problems, but they can often make life a lot easier.
+
+\[
+\sin(\alpha)\sin(\beta) = \frac{\cos(\alpha - \beta) - \cos(\alpha
+  + \beta)}{2}
+\]
+\[
+\cos(\alpha)\cos(\beta) = \frac{\cos(\alpha - \beta) + \cos(\alpha
+  + \beta)}{2}
+\]
+\[
+\sin(\alpha)\cos(\beta) = \frac{\sin(\beta + \alpha) - \sin(\beta
+  - \alpha)}{2}
+\]
+
+\section{Trigonometric Theory}
+
+\subsection{Trigonometric Laws}
+
+\par In the statement of these laws, $a$, $b$, and $c$ are the sides of a triangle, and $A$, $B$, and $C$ are the angles opposite those sides.
+
+\[
+\frac{a}{\sin{A}} = \frac{b}{\sin{B}} = \frac{c}{\sin{B}} = 2R
+\]
+\[
+c^2 = a^2 + b^2 - 2ab\cos{C}
+\]
+
+\subsection{Identities}
+
+\par This section containse some identities that often are useful with contest math.
+
+\par In a triangle $ABC$,
+
+\[
+\tan{A}\tan{B}\tan{C} = \tan{A} + \tan{B} + \tan{C}
+\]
+\[
+\cos^2{A}+\cos^2{B}+\cos^2{C}+2\cos{A}\cos{B}\cos{C} = 1
+\]
+
+\subsection{Rocco's Method}
+
+\par Rocco Repeski (TJ Class of 2004) developed this method for solving trig problems.  This should only be used as an absolute last resort, given that it doesn't usually work; but if time is running out and no other solution method appears, it's better than nothing.
+
+\par The theory behind Rocco's method is that any trig functions can be changed to a known trig function.  For example, what is $\cos{50^{o}}$?  You probably have no idea!  Rocco's method says that $\cos{50^{o}}$ = $\cos{45^{o}}^-$, because the the cosine will get slightly smaller going from $45^{o}$ to $50^{o}$.  Hopefully, by the end of the problem, the +s and -s will cancel out, and a nice, pretty answer will result.  This rarely works, but at the worst provides a reasonably close guess.
+
+\par For an example of a problem solvable using Rocco's Method, see the final question in the problem set.
+
+\section{Problems}
+
+\begin{enumerate}
+
+\item (Traditional) $\cos{x} + \sin{x} = .5$.  Solve for $\sin{2x}$.
+
+\item (Schafer06) Compute $\displaystyle\sum_{i=1}^{90}{\sin{i^{o}}} + \sum_{i=91}^{180}{\cos{i^{o}}}$.
+
+\item (Traditional) $\tan{20^{o}}\tan{40^{o}}\tan{80^{o}} = \tan{x^{o}}$.  Solve for $x$.
+
+\end{enumerate}
+
+\newpage
+
+\section{Hints}
+
+All of the these hints are written in order to avoid giving away the solution, but it is still better to try each problem for a reasonable amount of time before using these hints.
+
+\begin{enumerate}
+
+\item Consider simple trigonometric identities.  What can be done to the given to tranform it to an identity?
+
+\item Clearly, adding all of the numbers up isn't possible.  What can be done to simplify the problem?
+
+\item Seperate out $\tan{\theta}$ into $\frac{\sin{\theta}}{\cos{\theta}}$.  If that fails, try Rocco's Method (this is one of the few problems where it works!)
+
+\end{enumerate}
+
+\newpage
+
+\section{Solutions}
+
+It is highly recommended that you not look at the solutions until you have put forth a strong effort to solve the problems yourself.  
+
+\begin{enumerate}
+
+\item \textbf{$-.75$}.  Squaring both sides, $(\cos{x} + \sin{x})^2 = \cos^2{x} + 2\cos{x}\sin{x} + \sin^2{x} = .25$.  As $2\sin{x}\cos{x} = \sin{2x}$, $1 + 2\cos{x}\sin{x} = .25$, and $\sin{2x} = -.75$.
+
+\item \textbf{$0$}.  Remember that $\cos(90^{o}+\theta) = \sin{-\theta} = -\sin{\theta}$.  Thus, the expression given is equivelent to $\displaystyle\sum_{i=1}^{90}{\sin{i^{o}}} + \sum_{i=1}^{90}{-\sin{i^{o}}} = 0$.
+
+\item \textbf{$60$}.
+
+\par \textbf{Method 1: Actual Trig}. Expand the expression: $\tan{20^{o}}\tan{40^{o}}\tan{80^{o}} = \frac{\sin{20^{o}}\sin{40^{o}}\sin{80^{o}}}{\cos{20^{o}}\cos{40^{o}}\cos{80^{o}}}$.  Using the Product-Sum formulae, this expression is shown to equal $\frac{(\cos{20^{o}}-\cos{60^{o}})\sin{80^{o}}}{(\cos{20^{o}} + \cos{60^{o}})\cos{80^{o}}}$.  Multiplying out again and using the Product-Sum formulae, this equals $\frac{\cos{20^{o}}\sin{80^{o}} - \cos{60^{o}}\sin{80^{o}}}{\cos{20^{o}}\cos{80^{o}} + \cos{60^{o}}\cos{80^{o}}} = \frac{(\frac{\sin{100^{o}}-\sin{(-60^{o})}}{2}) - (\frac{\sin{80^{o}}}{2})}{(\frac{\cos{100^{o}}+\cos{60^{o}}}{2}) + (\frac{\cos{80^{o}}}{2})}$, and as $\cos{100^{o}} = -\cos{80^{o}}$ and $\sin{100^{o}} = \sin{80^{o}}$, $\frac{(\frac{\sin{60^{o}}}{2}) + (\frac{\sin{100^{o}}-\sin{80^{o}}}{2})}{(\frac{\cos{60^{o}}}{2}) + (\frac{\cos{100^{o}}+\cos{80^{o}}}{2})} = \frac{\sin{60^{o}}}{\cos{60^{o}}} = \tan{60^{o}}$.
+
+\par \textbf{Method 2: Rocco's Method}.  Simplifying, $\tan{20^{o}}\tan{40^{o}}\tan{80^{o}} = \tan{30^{o}}^{-}\tan{60^{o}}^{-}\tan{60^{o}}^{++} = \tan{60^{o}}$.  This really shouldn't work, but it does.
+
+\end{enumerate}
+
+\end{document}
