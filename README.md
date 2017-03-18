@@ -8,7 +8,7 @@
 
 * need to finish writing up wronskian stuff, everything past that 
 * if you have a book (Sochaki + Peterson) this would be sections: 
-2.5, 3.1, 3.6, 4.1, 4.2
+2.4, 2.5, 3.1, 3.6, 4.1, 4.2
 
 
 
