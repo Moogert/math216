@@ -14,6 +14,29 @@
 
 % 4.3 
 \section*{Differential Equations}
+
+\subsection*{Complex Solutions}
+\begin{itemize}
+
+\item if $L(y)=0$ is a CCLDE w/ real coefficientsr and if $y(x) = \mu(x) + iv(x)$ is a complex-valued solution, $\mu(x), v(x)$ are also solutions. 
+
+\item If $L(y)=0$ is a real CCLDE and $r, \bar{r}$ are a pair of roots of characteristic polynomial, then 
+$e^{ax}\cos bx, e^{ax}s\sin bx$ are real, independent solutions, with same span as $e^{rx}, e^{\bar{r}x}$
+
+\item If $L(Y)=0$ has a characteristic polynomial with roots $r_1, ...,r_n$, and sets of solutions formed by: 
+\begin{enumerate}
+\item For real roots $r$ of multiplicity $m$, we include 
+$$e^{rx}, xe^{rx}, ..., x^{m-1}e^{rx}$$
+\item For complex roots $r$ of multiplicity $m$, we include
+ $$e^{rx}\cos bx, e^{rx}\sin bx, xe^{rx}\cos bx, xe^{rx}\sin bx , ..., x^{m-1}e^{rx}\cos bx, x^{m-1}e^{rx}\sin bx$$
+\end{enumerate}
+...then this set of functions is independent, and is a fundamental set of solutions. 
+
+
+\end{itemize}
+
+
+
 \subsection*{Method of Undetermined Coefficients}
 \begin{itemize}
 \item The solution to a differential equation is the sum of the particular solution and the homogenous solution: 
@@ -48,10 +71,11 @@ this system is \textbf{overdamped}.
 $$\mu'' + ku = h(t)$$
 We'll consider a case where $\omega_0\neq \omega$, wher $\omega = \sqrt{k/m}$; complete set of solutions can be obtained by: 
 $$\mu_H = c_1\cos\omega_0 t + c_2\sin \omega_0 t$$
-$$\mu_P = \frac{a}{\omega_0^2-\omega^2}\cos\omega t$
+$$\mu_P = \frac{a}{\omega_0^2-\omega^2}\cos\omega t$$
 ...and $\mu = \mu_H+\mu_P$. 
 \item \textbf{Resonance} occurs when $\omega = \omega_0$; in these situations, the amplitude increases as time increases. This has been known to cause some kinds of problems. 
-\item 
+% add gain and phase shift stuff in?? 
+% add in some photos of what these different scenarios look like 
 
 \end{enumerate}
 
@@ -117,10 +141,17 @@ $$\mbox{dim(ker}(T)+\mbox{dim(range}(T)) = \mbox{dim}(V)$$
 \section*{Errata} 
 \subsection*{Trig Identities}
 \begin{itemize}
-\item 
-
-
+\item STUFF HERE 
 \end{itemize}
 
+\subsection*{Complex stuff!! }
+add it yo 
+
+\iffalse 
+#### sources 
+* http://inside.mines.edu/fs_home/gmurray/teach/s02/trialSoln.pdf
+
+\fi 
 
 \end{document}
+
