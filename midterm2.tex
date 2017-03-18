@@ -7,7 +7,7 @@
 \usepackage{amssymb}
 \usepackage{siunitx}
 \author{Jeffrey Wubbenhorst}
-\title{Midterm 2}
+\title{Math 216 Midterm 2 Study Guide }
 
 \begin{document}
 \maketitle
@@ -23,7 +23,18 @@
 
 \item If $A$ is $m\times n$, solutions to system of homogenous linear equations $AX=0$ is a subspace of $\mathbb{R}^n$
 
-\item A set of vectors $\{v_1, v_2, ..., v_n$ is \textbf{linearly independent }iff, for a system $c_1v_1+c_2v_2+...+c_nv_n=0$ all constants $c$ are zero. 
+\item A set of vectors $\{v_1, v_2, ..., v_n$ is \textbf{linearly independent }iff, for a system $c_1v_1+c_2v_2+...+c_nv_n=0$ all constants $c$ are zero. As a random note, no set containing hte zero vector is independent. 
+
+\end{itemize}
+
+\subsection*{Dimension, Nullspace, Row Space, Column Space }
+% chapt 2.4 
+\begin{itemize}
+
+\item If a vector space $V$ has a basis of $n$ vectors, the \textbf{dimension of $V$ is $n$}. This is denoted as $\mbox{dim}(V)$. 
+
+\item $\mbox{dim}(\mathbb{R}^n)=n, \mbox{dim}M_m\times n(\mathbb{R})=mn, \mbox{dim}(P_n)=n+1$
+
 
 \item Suppose some $v_1, v_2,...v_n$ in a vector space $V$. The vectors are \textbf{linearly dependent} iff \textit{only one} if $v_1,v_2,...,v_n$ is a linear combination of the others. To see if a set of vectors is linearly independent, solve for the constants for the homogenous equation; if a non-trivial solution exists, then the vectors are linearly dependent. 
 
@@ -40,7 +51,29 @@
 \item The subspace of some $V$ consisting of all linear combinations of vectors $v_1, v_2,...,v_n$ is referred to as the \textbf{subspace} of $V$ spanned by $v_1, v_2,...,v_n$ \\
 ...in English, the span is the set of all the different places you could ``go" if you combined the given vectors in every possible way. To see if something spans something else, solve for constants $c$; if there's no solution, then the set does not span. 
 
-\item 
+\item Suppose that $V$ is a vector space of dimension $n$. 
+\begin{enumerate}
+\item If the vecrtors $v_1,v_2,...,v_n$ are linearly independet, then $v_1,v_2, ...,v_n$ are linearly independent, then $v_1,v_2, ...,v_n$  form a basis for $V$
+
+\item If $v_1,v_2, ...,v_n$ span $V$, then $v_1,v_2, ...,v_n$ form a \textbf{basis}
+\end{enumerate}
+
+\item The solutions to the homogenous system $AX=0$, where $A$ is an $m\times n$ matrix form a subspace of $\mathbb{R}^n$. This vector space of solutions is the \textbf{nullspace} or \textbf{kernel}$\mbox{ of } A, \mbox{ denoted by } NS(A)$
+
+\item The \textbf{row space} of some matrix $A$ is the span of the rows of $A$. If $A, B$ are row-equivalent matrices, $RS(A)=RS(B)$
+
+\item Weirdly enough, for an $m\times n \mbox{ matrix },\mbox{dim}(RS(A))+\mbox{dim}(NSA(A))=n$
+
+\item The \textbf{column space} of a matrix $A$ is the subspace of $\mathbb{R}^m$ spanned by the columns of $A$ and is denoted by $CS(A)$. To find the column space of a matrix, you: 
+\begin{enumerate}
+\item \textbf{T}ranspose 
+\item \textbf{R}ow-reduce
+\item transpose back 
+\item take \textbf{B}asis vectors 
+\end{enumerate}
+...dumb mnemonic is \textbf{TR}i\textbf{B}e. (Or `tribble' if you're into Star Trek.) 
+
+\item [more weird stuff] For a given matrix $A, \mbox{dim}(RS(A)) = \mbox{dim}(CS(A))$; this common dimension is called the \textbf{rank} of $A$. 
 
 \end{itemize}
 
@@ -172,6 +205,11 @@ $$\mbox{dim(ker}(T)+\mbox{dim(range}(T)) = \mbox{dim}(V)$$
 
 
 \section*{Errata} 
+
+\begin{itemize}
+\item The \textbf{contrapositive }of a statement is the reverse of the premise and conclusion, and the negation of both. Original statement: ``Duke won, and I'm happy." Contrapositive: ``If I'm not happy, then Duke didn't win."
+\end{itemize}
+
 \subsection*{Trig Identities}
 \begin{itemize}
 \item STUFF HERE 
@@ -179,6 +217,7 @@ $$\mbox{dim(ker}(T)+\mbox{dim(range}(T)) = \mbox{dim}(V)$$
 
 \subsection*{Complex stuff!! }
 add it yo 
+
 
 \iffalse 
 #### sources 
