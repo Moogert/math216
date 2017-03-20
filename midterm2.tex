@@ -21,11 +21,21 @@
 \item Let $W$ be a nonempty subset of a vector space $V$. $W$ is a subspace of $V$ iff, $\forall u, v \in W$ and $\forall c \in \mathbb{R}, u + w \in W, cu \in W$
 % do I need to translate this into English tho 
 
+\item There are some other rules for vector spaces: 
+\begin{enumerate}
+\item The zero vector is unique 
+\item the negative of a vector $v\in V$ is unique 
+\item $0\cdot \vec{v}=0$
+\item $c\cdot \vec{0}=\vec{0}$
+\item $(-1)\vec{v}=-\vec{v}$ 
+\end{enumerate}
+	
+
 \item If $A$ is $m\times n$, solutions to system of homogenous linear equations $AX=0$ is a subspace of $\mathbb{R}^n$
 
 \item A set of vectors $\{v_1, v_2, ..., v_n$ is \textbf{linearly independent }iff, for a system $c_1v_1+c_2v_2+...+c_nv_n=0$ all constants $c$ are zero. As a random note, no set containing hte zero vector is independent. 
 
-\end{itemize}
+\end{itemize}	
 
 \subsection*{Dimension, Nullspace, Row Space, Column Space }
 % chapt 2.4 
@@ -73,7 +83,7 @@
 \end{enumerate}
 ...dumb mnemonic is \textbf{TR}i\textbf{B}e. (Or `tribble' if you're into Star Trek.) 
 
-\item [more weird stuff] For a given matrix $A, \mbox{dim}(RS(A)) = \mbox{dim}(CS(A))$; this common dimension is called the \textbf{rank} of $A$. 
+\item For a given matrix $A, \mbox{dim}(RS(A)) = \mbox{dim}(CS(A))$; this common dimension is called the \textbf{rank} of $A$. 
 
 \end{itemize}
 
@@ -90,6 +100,43 @@ is nonzero for some $x$ in $(a,b)$, then $f_1, f_2, ...,f_n \mbox{ are linearly 
 
 % 4.3 
 \section*{Differential Equations}
+
+\subsection*{General}
+\begin{itemize}
+
+\item The \textbf{general solution} gives us all possible solutions to a given differential equation
+
+\item If $a,b>0$ and $f$ and $\partial f/\partial y$ are continuous on the rectangle $|x-x_0|<a$, 
+and $|y-y_0|<b$, then there exists an $h>0$ so that the IVP 
+$$y'=f(x,y), y(x_0)=y_0$$
+has one \textit{and only one} solution for $|x-x_0|\leq h$
+
+\end{itemize}
+
+\subsection*{Modeling with Diff Eq}
+
+\begin{itemize}
+\item \textbf{Continuously compounded interest, population, radioactive decay:} 
+$t=Ce^{kt}$, where $C>0$ and $k$ are constants. \textbf{Exponential growth} if $k>0$, \textbf{exponential decay} if $k<0$
+
+\item \textbf{Temperature} changes are determined by the equation 
+$\theta = k(\theta_{environment} - \theta_{initial}$
+
+\end{itemize}
+
+\subsection*{Higher-order LDE}
+
+\begin{itemize}
+\item For solutions to a differential equation $y_1,...,y_n$ on an interval $(a,b)$, if $w(y_1(x_0),...,y_n(x_0))=0$ for any $x_0$ in $(a,b)$, then $y_1,...,y_n$ are linearly dependent on $(a,b)$
+
+\item If $r_1,...,r_k$ are distinct real roots for a characteristic polynomial of form 
+$$a_ny^{(n)}+a_{n-1}y^{(n-1)}+...+a_1y'+a_0y=0$$
+then $e^{r_1},...,e^{r_kx}$ are linearly independent solutions to this DE, and form a fundamenmtal set of solutions. 
+
+\item 
+
+\end{itemize}
+
 
 \subsection*{Complex Solutions}
 \begin{itemize}
