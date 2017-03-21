@@ -9,4 +9,7 @@
 * need to write up everything that Bray has in his notes that ISN'T
 covered in the book 
 
+# SOURCES: 
+
+* http://www.math.uiuc.edu/~tyson/existence.pdf
 

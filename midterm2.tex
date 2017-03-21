@@ -13,8 +13,16 @@
 \maketitle
 
 \section*{Dimension, Linear Indepence} 
-\subsection*{Subspaces and Spanning Sets }% chap 2.2
+\subsection*{Subspaces and Spanning Sets }% chap 2.2, p 93 of bray notes
 \begin{itemize}
+
+\item Say $\alpha=\{v_1,...v_n\}$ is a basis for $V$, and $\vec{v}\in V$. Coordinates of $\vec{v}$ relative to the basis $\alpha$ are $[\vec{v}]_\alpha=\left(
+\begin{array}{c} 
+c_1 \\ \vdots \\ c_n
+\end{array} \right)
+$
+where $c$ is the set of contstants for $\vec{v}=c_1\vec{v_1}+...+c_n\vec{v_n}$
+
 
 \item A subset $W$ of a vector space $BV$ is a subspace of $V$ if $W$ is a subspace under addition, scalar multiplication of $V$ restricted to  $W$. (That is, if $W$ is closed under the same rules of scalar mulitplication and addition as $V$)
 
@@ -33,13 +41,30 @@
 
 \item If $A$ is $m\times n$, solutions to system of homogenous linear equations $AX=0$ is a subspace of $\mathbb{R}^n$
 
-\item A set of vectors $\{v_1, v_2, ..., v_n$ is \textbf{linearly independent }iff, for a system $c_1v_1+c_2v_2+...+c_nv_n=0$ all constants $c$ are zero. As a random note, no set containing hte zero vector is independent. 
+\item A set of vectors $\{v_1, v_2, ..., v_n$ is \textbf{linearly independent }iff, for a system $c_1v_1+c_2v_2+...+c_nv_n=0$ all constants $c$ are zero. As a random note, no set containing the zero vector is independent. 
 
 \end{itemize}	
 
 \subsection*{Dimension, Nullspace, Row Space, Column Space }
 % chapt 2.4 
 \begin{itemize}
+
+\item \textbf{Equivalent facts about nonsingular $n\times n$ matrices} (in particular some matrix $A$): \\
+$A$ is nonsingular $\leftrightarrow$  
+rref($A)=I \leftrightarrow rank(A) = n \leftrightarrow \\
+A \mbox{ has existence property } \leftrightarrow
+A \mbox{ has uniqueness property } \leftrightarrow \\
+A \mbox{ is invertible } \leftrightarrow
+A \mbox{ is a product of elementary matrices } \leftrightarrow \\
+A \mbox{ represents a row reduction } \leftrightarrow
+det(A) \neq 0 \leftrightarrow \\
+\mbox{ columns of }A\mbox{ are linearly independent} \leftrightarrow
+\mbox{ rows of }A\mbox{ are linearly independent} \leftrightarrow \\
+dim(CS(A))=n \leftrightarrow
+dim(RS(A)) = n \leftrightarrow 
+dim(NS(A)) = 0
+$
+
 
 \item If a vector space $V$ has a basis of $n$ vectors, the \textbf{dimension of $V$ is $n$}. This is denoted as $\mbox{dim}(V)$. 
 
@@ -93,7 +118,11 @@
 % * internally debates whether or not to actually bother representing what a wronskian is in LaTeX * 
 \item Suppose some $f_1, f_2,...,f_n$ are functions in $D^{n-1}(a,b).\mbox{ If the \textbf{Wronskian} }w(f_1(x),f_2(x),...,f_n(x)) \mbox{ of } f_1,f_2,...,f_n$
 is nonzero for some $x$ in $(a,b)$, then $f_1, f_2, ...,f_n \mbox{ are linearly independent elements of }D^{n-1}(a,b)$
-% add in Bray's thing !!! 
+
+\item Let $y_1,...y_n$ be solutions to the $n$th-order homogenous DE (satisfying the uniqueness/existence THM)
+$L(y)=0$, then 
+$(w(x)=0 \mbox{ for any }x_0\rightarrow (\{y_1,...,y_n\}\mbox{ is linearly dependent }$
+
 
 \end{itemize}
 
@@ -106,10 +135,12 @@ is nonzero for some $x$ in $(a,b)$, then $f_1, f_2, ...,f_n \mbox{ are linearly 
 
 \item The \textbf{general solution} gives us all possible solutions to a given differential equation
 
-\item If $a,b>0$ and $f$ and $\partial f/\partial y$ are continuous on the rectangle $|x-x_0|<a$, 
+\item \textbf{Existence and uniqueness theorem:}If $a,b>0$ and $f$ and $\partial f/\partial y$ are continuous on the rectangle $|x-x_0|<a$, 
 and $|y-y_0|<b$, then there exists an $h>0$ so that the IVP 
 $$y'=f(x,y), y(x_0)=y_0$$
 has one \textit{and only one} solution for $|x-x_0|\leq h$
+
+\item \textbf{Rational root theorem}: If $f(x)=a_nx^n+...+a_1x+a_0$ has \textit{integer} coefficients zand if $r=p/q$ is a \textit{rational} root, then $p$ divides $a_0$ and $a$ divides $a_n$. SO, a rational root $p/q\mbox{ of }\lambda^3-5\lambda^2+6\lambda-2=0$ must have $p$ dividing 2 and $q$ dividing 1, giving $\pm 1\mbox{ and } \pm 2$ as the only possible rational roots. 
 
 \end{itemize}
 
@@ -127,7 +158,10 @@ $\theta = k(\theta_{environment} - \theta_{initial}$
 \subsection*{Higher-order LDE}
 
 \begin{itemize}
-\item For solutions to a differential equation $y_1,...,y_n$ on an interval $(a,b)$, if $w(y_1(x_0),...,y_n(x_0))=0$ for any $x_0$ in $(a,b)$, then $y_1,...,y_n$ are linearly dependent on $(a,b)$
+\item If $p(\lambda)$ has all real roots, giving solutions of the forms $e^{r_ix}\mbox{ and }x^ke^{r_ix}$
+then the solutions are \textbf{linearly independent}.
+
+\item For solutions to a differential equation $y_1,...,y_n$ on an interval $(a,b)$, if $w(y_1(x_0),...,y_n(x_0))=0$ for any $x_0$ in $(a,b)$, then $y_1,...,y_n$ are linearly dependent on $(a,b)$. \textit{Note that this \textbf{only} holds if the number of functions is equal to the order of the differential equation.}
 
 \item If $r_1,...,r_k$ are distinct real roots for a characteristic polynomial of form 
 $$a_ny^{(n)}+a_{n-1}y^{(n-1)}+...+a_1y'+a_0y=0$$
@@ -140,6 +174,8 @@ then $e^{r_1},...,e^{r_kx}$ are linearly independent solutions to this DE, and f
 
 \subsection*{Complex Solutions}
 \begin{itemize}
+
+\item \textit{\textbf{Note: }there is an entire section on complex numbers at the end!}
 
 \item if $L(y)=0$ is a CCLDE w/ real coefficientsr and if $y(x) = \mu(x) + iv(x)$ is a complex-valued solution, $\mu(x), v(x)$ are also solutions. 
 
@@ -265,6 +301,7 @@ $$\mbox{dim(ker}(T)+\mbox{dim(range}(T)) = \mbox{dim}(V)$$
 
 \begin{itemize}
 \item The \textbf{contrapositive }of a statement is the reverse of the premise and conclusion, and the negation of both. Original statement: ``Duke won, and I'm happy." Contrapositive: ``If I'm not happy, then Duke didn't win."
+\item \textbf{Quadratic equation:} $\frac{-b\pm \sqrt{b^2-4ac}}{2a}$ 
 \end{itemize}
 
 \subsection*{Trig Identities}
@@ -274,6 +311,17 @@ $$\mbox{dim(ker}(T)+\mbox{dim(range}(T)) = \mbox{dim}(V)$$
 
 \subsection*{Complex stuff!! }
 add it yo 
+\begin{itemize}
+\item $e^{i\theta}=\cos\theta+i\sin\theta$
+\item $(r_1e^{i\theta_1})(r_2e^{i\theta_2})=(r_1r_2)e^{i(\theta_1\theta_2)}$
+\item \textbf{UNDERSTAND COMPLEX CONJUGATES }
+\item \textbf{Roots of unity:} Let $\alpha = e^{2\pi i/n}. \mbox{ Then, } 1, \alpha, \alpha^2,...,\alpha^{n-1}$ 
+are the $n$th roots of 1. 
+\item ...applying this to any complex number: Let $r$ be any such root. (That is, if
+$\alpha = me^{i\theta}, r=(m^{1/n})e^i\theta/n$. In this case, the nth roots of 
+$\alpha$ are \textbf{NOTE THIS ISN"T DONE!!! 1}
+
+\end{itemize}
 
 
 \iffalse 
