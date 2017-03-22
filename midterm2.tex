@@ -13,8 +13,16 @@
 \maketitle
 
 \section*{Dimension, Linear Indepence} 
-\subsection*{Subspaces and Spanning Sets }% chap 2.2, p 93 of bray notes
+\subsection*{Subspaces and Spanning Sets }% chap 2.2, p 82 of bray notes
 \begin{itemize}
+
+\item \textbf{Notation: }
+\begin{enumerate}
+\item $C(a,b)=\{\mbox{continuous functions on } (a,b)\}$
+\item $D(a,b)=\{\mbox{ differentiable functions on } (a,b)\}$ 
+\item $D^n(a,b)=\{f | f\mbox{ has an nth derivative }\}$ 
+\item $C^n(a,b) = \{f|f^{[n]}\mbox{ is continous }\}$
+\end{enumerate}
 
 \item Say $\alpha=\{v_1,...v_n\}$ is a basis for $V$, and $\vec{v}\in V$. Coordinates of $\vec{v}$ relative to the basis $\alpha$ are $[\vec{v}]_\alpha=\left(
 \begin{array}{c} 
@@ -42,6 +50,8 @@ where $c$ is the set of contstants for $\vec{v}=c_1\vec{v_1}+...+c_n\vec{v_n}$
 \item If $A$ is $m\times n$, solutions to system of homogenous linear equations $AX=0$ is a subspace of $\mathbb{R}^n$
 
 \item A set of vectors $\{v_1, v_2, ..., v_n$ is \textbf{linearly independent }iff, for a system $c_1v_1+c_2v_2+...+c_nv_n=0$ all constants $c$ are zero. As a random note, no set containing the zero vector is independent. 
+
+\item Vectors $v_1,...v_n$ of a vector space $V$ \textbf{span } $V$ if Span$\{v_1,...v_n\}=V$. In English, this means that $v1,...,v_n$ span $V$ if every vector in $V$ is a linear combination of $v_1,...,v_n$. 
 
 \end{itemize}	
 
@@ -82,14 +92,14 @@ $
 
 \item Suppose some $v_1, v_2,...v_n$ in a vector space $V$. Then $v_1, v_2,...,v_n$ form a basis for $V$ iff each vector in $V$ is uniquely expressible as a linear combonation of $v_1,v_2,...,v_n$
 
-\item If $V$ is a bvector space adn $v_1, v_2, ...,v_n$ are vectors in $V$, then the set of all linear combinationfs of $v_1, v_2,...,v_n$ is a subspace of $V$ 
+\item If $V$ is a vector space and $v_1, v_2, ...,v_n$ are vectors in $V$, then the set of all linear combinations of $v_1, v_2,...,v_n$ is a subspace of $V$ 
 
 \item The subspace of some $V$ consisting of all linear combinations of vectors $v_1, v_2,...,v_n$ is referred to as the \textbf{subspace} of $V$ spanned by $v_1, v_2,...,v_n$ \\
 ...in English, the span is the set of all the different places you could ``go" if you combined the given vectors in every possible way. To see if something spans something else, solve for constants $c$; if there's no solution, then the set does not span. 
 
 \item Suppose that $V$ is a vector space of dimension $n$. 
 \begin{enumerate}
-\item If the vecrtors $v_1,v_2,...,v_n$ are linearly independet, then $v_1,v_2, ...,v_n$ are linearly independent, then $v_1,v_2, ...,v_n$  form a basis for $V$
+\item If the vectors $v_1,v_2,...,v_n$ are linearly independent, then $v_1,v_2, ...,v_n$ are linearly independent, then $v_1,v_2, ...,v_n$  form a basis for $V$
 
 \item If $v_1,v_2, ...,v_n$ span $V$, then $v_1,v_2, ...,v_n$ form a \textbf{basis}
 \end{enumerate}
@@ -98,7 +108,7 @@ $
 
 \item The \textbf{row space} of some matrix $A$ is the span of the rows of $A$. If $A, B$ are row-equivalent matrices, $RS(A)=RS(B)$
 
-\item Weirdly enough, for an $m\times n \mbox{ matrix },\mbox{dim}(RS(A))+\mbox{dim}(NSA(A))=n$
+\item Weirdly enough, for an $m\times n \mbox{ matrix },\mbox{dim}(RS(A))+\mbox{dim}(NS(A))=n$
 
 \item The \textbf{column space} of a matrix $A$ is the subspace of $\mathbb{R}^m$ spanned by the columns of $A$ and is denoted by $CS(A)$. To find the column space of a matrix, you: 
 \begin{enumerate}
@@ -164,10 +174,10 @@ has one \textit{and only one} solution for $|x-x_0|\leq h$
 
 \begin{itemize}
 \item \textbf{Continuously compounded interest, population, radioactive decay:} 
-$t=Ce^{kt}$, where $C>0$ and $k$ are constants. \textbf{Exponential growth} if $k>0$, \textbf{exponential decay} if $k<0$
+$t=Ce^{kt}$, where $C>0$ and represents the quantity at $t=0$, and $k$ is constant (which will usually be solved for). \textbf{Exponential growth} if $k>0$, \textbf{exponential decay} if $k<0$
 
 \item \textbf{Temperature} changes are determined by the equation 
-$\theta = k(\theta_{environment} - \theta_{initial}$
+$\theta '= k(\theta_{environment} - \theta_{initial})$
 
 \end{itemize}
 
@@ -216,17 +226,24 @@ $$e^{rx}, xe^{rx}, ..., x^{m-1}e^{rx}$$
 \begin{itemize}
 \item The solution to a differential equation is the sum of the particular solution and the homogenous solution: 
 $$ y= y_h+y_p$$
+
 \item The goal is to find some $y_p$ that works with some given differential equation, with $\lambda = r$ is a root of multiplicity $m$, $k$ is highest power of $x$ on the right side of the equation. 
-\item If the root to an LDE of the form $a_ny^{(n)}+...+a_1y'+a_0y=Ax^ke^{rx}$ is real, the particular solution will be $y_p=x^m(A_kx^k+...+A_1x+A_0)e^{rx}$
+
+\item If the root to an LDE of the form $a_ny^{(n)}+...+a_1y'+a_0y=Ax^ke^{rx}$ is real, the particular solution will be 
+$$y_p=x^m(A_kx^k+...+A_1x+A_0)e^{rx}$$
+
 \item If root to equation of form 
 $$ a_ny^{(n)}+...+a_1y'+a_0y=Ax^ke^{ax}\cos bx+Bx^ke^{ax}\sin bx $$
 is imaginary, particular solution is given as: 
 $$ y_p = x^m(A_kx^k+...+A_1x+A_0)e^{ax}\cos bx + x^m(B_kx^k+...+B_1x+B_0)e^{ax}\sin bx $$
+
 \item \textit{Note: the method of undetermined coefficients is \underline{not} an exact science!} There can be trial and error involved; a table of decent guesses is embedded at the end of this document. 
+
 \end{itemize}
 
 \subsection*{Applications} % chap 4.5 + errata 
 \begin{itemize}
+
 \item Sitautions with no external forces are usually given in the form 
 $$F = mu'' + fu' + ku = 0$$
 where (in spring problems at least) $k$ is the spring constant, $f$ is the friction coefficient, and mass $m$. (Don't forget that pounds are a unit of force, \textit{not} of mass!)
@@ -237,14 +254,16 @@ where (in spring problems at least) $k$ is the spring constant, $f$ is the frict
 \item If $f-4km<0$, $\lambda= -a\pm bi$; in this case, the oscillating thing in question takes a bit to stop moving. This system is \textbf{underdamped}.  
 \item If $f-4km>0$, there will be two roots $r_1, r_2 < 0$, solutions will have the form $u=c_1e^{r_1t}+c_2e^{r_2t}$
 this system is \textbf{overdamped}. 
+
 \item If $f^2-4km=0$, we have one root $r=\frac{-f}{2m}$ and solutions $u=c_1e^{rt}+c_2te^{rt}$. This system is \textbf{critically damped}, and is the case where the oscillating thing returns to rest within the shortest amount of time. 
+
 \end{enumerate}
 
 \item In \textbf{forced cases}, there are a few possible situations: 
 \begin{enumerate}
 \item For instances of no friction (system is \textbf{undamped}), the equation will have the form: 
 $$\mu'' + ku = h(t)$$
-We'll consider a case where $\omega_0\neq \omega$, wher $\omega = \sqrt{k/m}$; complete set of solutions can be obtained by: 
+We'll consider a case where $\omega_0\neq \omega$, where $\omega = \sqrt{k/m}$; complete set of solutions can be obtained by: 
 $$\mu_H = c_1\cos\omega_0 t + c_2\sin \omega_0 t$$
 $$\mu_P = \frac{a}{\omega_0^2-\omega^2}\cos\omega t$$
 ...and $\mu = \mu_H+\mu_P$. 
@@ -284,7 +303,7 @@ $$ D : D(a, b) \to F(a, b)$$
 \item For some \textbf{linear transformation}$T : V \to W$ the following properties hold: 
 \begin{enumerate}
 \item $T(0)=0$
-\item $T(-v)=0T(v) $ for any $v\in V$
+\item $T(-v)=-T(v) $ for any $v\in V$
 \item $T(u-v)=T(u)-T(v)$ for any $u, v \in V$ 
 \item $T(c_1v_1+c_2v_2+...+c_kv_k)=c_1T(v_1)+c_2T(v_2)+...+c_kT(v_k)$ for any scalars 
 $c_1, c_2,...,c_k$ and any vectors $v_1, v_2,...v_k\in V$
