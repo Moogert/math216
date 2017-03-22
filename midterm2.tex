@@ -69,6 +69,7 @@ $
 \item If a vector space $V$ has a basis of $n$ vectors, the \textbf{dimension of $V$ is $n$}. This is denoted as $\mbox{dim}(V)$. 
 
 \item $\mbox{dim}(\mathbb{R}^n)=n, \mbox{dim}M_m\times n(\mathbb{R})=mn, \mbox{dim}(P_n)=n+1$
+\item The \textbf{basis vectors of a polynomial} of degree $n$ are $\{x^n,x^{n-1},...,x,1\}$. This fundamental set of solutions \textbf{spans} $P_n$. 
 
 
 \item Suppose some $v_1, v_2,...v_n$ in a vector space $V$. The vectors are \textbf{linearly dependent} iff \textit{only one} if $v_1,v_2,...,v_n$ is a linear combination of the others. To see if a set of vectors is linearly independent, solve for the constants for the homogenous equation; if a non-trivial solution exists, then the vectors are linearly dependent. 
@@ -121,9 +122,24 @@ is nonzero for some $x$ in $(a,b)$, then $f_1, f_2, ...,f_n \mbox{ are linearly 
 
 \item Let $y_1,...y_n$ be solutions to the $n$th-order homogenous DE (satisfying the uniqueness/existence THM)
 $L(y)=0$, then 
-$(w(x)=0 \mbox{ for any }x_0\rightarrow (\{y_1,...,y_n\}\mbox{ is linearly dependent }$
+\\ $(w(x)=0 \mbox{ for any }x_0\rightarrow (\{y_1,...,y_n\}\mbox{ is linearly dependent }$
+\item \textbf{Note:} The Wonskian can be computed for any convenient value of $x$. 
+Try to find values that simplify the computations. 
 
+\item \textit{Note:} It \textit{cannot} be said that $w(x)=0\Rightarrow\{f_1,...,f_n\}$ are linearly dependent!
 
+\item A function $f: \mathbb{R}' \rightarrow \mathbb{R}'$ is \textbf{analytic} (also ``real analytic") if its Taylor series converges to itself. For our purposes, this means that all sums, products, and fractions of $e^x, \cos x, \sin x$, and all polynomials will are analytic functions. 
+
+\item If $f_1,...,f_n$ are \textbf{analytic }and the \textbf{Wronskian }is identically zero (that is, zero everywhere), then  $\{f_1,...,f_n\}$ is \textbf{linearly dependent}. 
+
+\iffalse 
+\item If $\{y_1,...,y_n\}$ are solutions to the $n$th order linear homogenous DE $L(y)=0$, 
+then: 
+\begin{enumerate}
+\item The Wronskian is always 0, functions are linearly dependent 
+\item The Wronskian is never 0, functions are linearly independent 
+\end{enumerate} % what is the point of this 
+\fi 
 \end{itemize}
 
 
@@ -182,14 +198,14 @@ then $e^{r_1},...,e^{r_kx}$ are linearly independent solutions to this DE, and f
 \item If $L(y)=0$ is a real CCLDE and $r, \bar{r}$ are a pair of roots of characteristic polynomial, then 
 $e^{ax}\cos bx, e^{ax}s\sin bx$ are real, independent solutions, with same span as $e^{rx}, e^{\bar{r}x}$
 
-\item If $L(Y)=0$ has a characteristic polynomial with roots $r_1, ...,r_n$, and sets of solutions formed by: 
+\item If $L(Y)=0$ has a \textbf{characteristic polynomial} with roots $r_1, ...,r_n$, and sets of solutions formed by: 
 \begin{enumerate}
 \item For real roots $r$ of multiplicity $m$, we include 
 $$e^{rx}, xe^{rx}, ..., x^{m-1}e^{rx}$$
 \item For complex roots $r$ of multiplicity $m$, we include
  $$e^{rx}\cos bx, e^{rx}\sin bx, xe^{rx}\cos bx, xe^{rx}\sin bx , ..., x^{m-1}e^{rx}\cos bx, x^{m-1}e^{rx}\sin bx$$
 \end{enumerate}
-...then this set of functions is independent, and is a fundamental set of solutions. 
+...then this set of functions is \textbf{independent}, and is a \textbf{fundamental set }of solutions. 
 
 
 \end{itemize}
@@ -307,6 +323,10 @@ $$\mbox{dim(ker}(T)+\mbox{dim(range}(T)) = \mbox{dim}(V)$$
 \subsection*{Trig Identities}
 \begin{itemize}
 \item STUFF HERE 
+\item $\sin (\alpha +\beta )=\sin \alpha \cos \alpha + \sin \beta \cos \alpha$ 
+\item $\sin (\alpha - \beta ) = \sin\alpha \cos \beta - \sin \beta \cos \alpha $ 
+\item $\cos (\alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta $ 
+\item $\cos (\alpha - \beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta $
 \end{itemize}
 
 \subsection*{Complex stuff!! }
