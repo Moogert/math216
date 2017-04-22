@@ -1,0 +1,102 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pdfpages}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\author{Jeffrey Wubbenhorst}
+\title{Math 216 Midterm 3 Study Guide }
+
+\begin{document}
+\maketitle
+
+\section{Matrices for Linear Transformations}
+% as in section 5.3 in the book 
+\begin{itemize} 
+\item Suppose $T: V\to W$ is an LT; further suppose $v_1, ...,v_n$ form a basis $\alpha$ for $V$ and $w_1, ..., w_m$ form a basis $\beta$ for $W$. If we were to express $T(v_1),...,T(v_n)$ in terms of 
+$w_1,...,w_m$, we get a series of equations of the form: 
+$
+T(v_1) =a_{11}w_1+a_21w_2+...+a_{m1}w_{m} \\
+T(v_2) = a_{12}w_1+a_{22}w_2+...+a_{m2}w_m \\
+\vdots \\
+T(v_m)=a_{1n}w_1
+$
+
+\end{itemize}
+
+\section*{Chapter 9.3 (``Schur's Theorem and Symmetric Matrices")}
+
+\begin{itemize}
+
+\item Recall tha $B$ is similar to $A$ if there exists an invertible $n\times n$ matrix such that $$B=P^{-1}AP$$
+If $P$ is an orthogonal matrix, that is: 
+$$P^{-1}=P^T \mbox{ and } B=P^TAP$$ 
+...we say that $B$ is \textbf{orthogonally simliar} to $A$. 
+
+\item If $P$ is an orthogonal matrix, $B$ is an orthogonal basis for $\mathbb{R}^n. $ \footnote{Since $P$ is change of basis matrix of $T(x)=Ax$}
+
+\item \textbf{Schur's Theorem:} Suppose $A$ is an $n\times n$ matrix. If all the eigenvalues of $A$ are real numbers, $A$ is orthogonally similar to an upper triangle matrix. 
+
+\item If $C$ is a matrix whose entries are complex numbers, the \textbf{Hermitian conjugate} of $C$, notated as $C^*$, is given as $C^*=\bar{C}^T$
+
+\item An $n \times n$ matrix $P$ with complex entries is a \textbf{unitary matrix }if $P^*P=I$. Unitary matrices are the analog of orthogonal matrices in a complex space. 
+
+\item An $n\times n$ matrix $B$ is unitaritly similar to an $n\times n$ matrix $A$ if there exists a unitary $P$ such that $B=P^TAP$. 
+
+% check these... are all conditions met?
+\item If $A$ is $n \times n$ and symmetric with real entries, all eigenvalues of $A$ are real. 
+
+\item If $A$ is symmetric with real entries, $A$ is diagonalizable. 
+
+\item If $A$ is symmetric with real entries and $\vec{v_1},\vec{v_2}$ are eigenvectors of $A$ with different associated eigenvalues, $v_1$ is orthogonal to $v_2$. 
+
+\item Commonly used steps for finding an orthogonal matrix $P$ that diagonalizes an $n\times n$ matrix symmetrix matrix $A$ with real entries: 
+
+\begin{enumerate}
+\item Find bases for eigenspaces of $A$
+\item Apply Gram-Schmidt process to basis of each eigenspace to obtain an orthonormal basis. 
+\item $P$ is a matrix made of columns from step 2. \textit{YEET }
+\end{enumerate}
+
+\item If $A$ Is an $n \times n$ symmetric matrix with real entries, then all the eigenvalues of a $A$ are real, and all eigenspaces have real bases. 
+% starting from bray notes here. Page 254. 
+
+\item In the \textit{complex space }$\mathbb{C}$, we have to redefine the \textbf{inner product}. The \textbf{Hermitian dot product} on $\mathbb{C}$ is defined as: 
+$$<\vec{v},\vec{w}>=\sum v_i\bar{w_i}=\vec{v}^T\vec{w}$$
+The properties of the Hermitian dot product are: 
+\begin{enumerate}
+\item $<\vec{v}, \vec{w}>_H=<\vec{w}, \vec{v}>_H$
+\item $<\vec{u}+\vec{v},\vec{w}>_H=<\vec{u},\vec{w}>+<\vec{v},\vec{v},\vec{w}>_H$
+\item $<c\vec{v},\vec{w}>_H=c<\vec{v},\vec{w}>_H$
+\item $<\vec{v},\vec{v}>_H\geq , <\vec{v},\vec{v}>_H=0 \mbox{ iff } \vec{v}=0$
+Functions satisfying these properties are called \textbf{Hermitian inner products.}
+
+\item With the Hermitian inner product, we also have the \textbf{Hermitian transpose:}
+$$A^*=\bar{A}^T$$ 
+Note that $\mbox{Hermitian transpose } \leftrightarrow \mbox{ Hermitian conjugate } \leftrightarrow \mbox{ adjoint }$. 
+\item Transposes relate to symmetry by definition: 
+$$ <A\vec{v},\vec{w}>_H=<\vec{w},A\vec{v}>_H$$ 
+Real symmetric matrices are Hermitian as well. 
+
+\item if $AA$ is real and symmetric with eigenvalues $\lambda_1 \neq \lambda_2$ and associated eigenvectors $\vec{v_1}, \vec{v_2}$, $\vec{v_1}, \vec{v_2}$ are \textbf{orthogonal}. 
+
+\item $<A\vec{v}, \vec{w}>_H=<\vec{v},A^*\vec{w}>_H$
+
+\item Recall that $A, B$ are similar if $B=P^{-1}AP$, where $P$ is a change of basis. We now say that: 
+If $A,B$ are similar by $BP^{-1}AP$ and $P$ is orthogonal, then $A, B$ are orthogonally similar, and $B=P^TAP$. 
+\item If $A$ is diagonalizable with $D=P^{-1}AP$ (that is, columns of $P$ are a basis of eigenvector) and if $P$ is orthogonal, then we say $A$ is \textbf{orthogonally diagonalizable}. 
+
+\item Every real, symmetric matrix is \textbf{orthogonally diagonalizable}. 
+
+
+\end{enumerate}
+
+
+
+
+\end{itemize}
+
+\end{document}
+
