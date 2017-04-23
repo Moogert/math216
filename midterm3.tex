@@ -65,12 +65,13 @@ $$P^{-1}=P^T \mbox{ and } B=P^TAP$$
 
 \item In the \textit{complex space }$\mathbb{C}$, we have to redefine the \textbf{inner product}. The \textbf{Hermitian dot product} on $\mathbb{C}$ is defined as: 
 $$<\vec{v},\vec{w}>=\sum v_i\bar{w_i}=\vec{v}^T\vec{w}$$
-The properties of the Hermitian dot product are: 
+The \textbf{properties of the Hermitian dot product }are: 
 \begin{enumerate}
 \item $<\vec{v}, \vec{w}>_H=<\vec{w}, \vec{v}>_H$
 \item $<\vec{u}+\vec{v},\vec{w}>_H=<\vec{u},\vec{w}>+<\vec{v},\vec{v},\vec{w}>_H$
 \item $<c\vec{v},\vec{w}>_H=c<\vec{v},\vec{w}>_H$
 \item $<\vec{v},\vec{v}>_H\geq , <\vec{v},\vec{v}>_H=0 \mbox{ iff } \vec{v}=0$
+\end{enumerate}
 Functions satisfying these properties are called \textbf{Hermitian inner products.}
 
 \item With the Hermitian inner product, we also have the \textbf{Hermitian transpose:}
@@ -89,14 +90,98 @@ If $A,B$ are similar by $BP^{-1}AP$ and $P$ is orthogonal, then $A, B$ are ortho
 \item If $A$ is diagonalizable with $D=P^{-1}AP$ (that is, columns of $P$ are a basis of eigenvector) and if $P$ is orthogonal, then we say $A$ is \textbf{orthogonally diagonalizable}. 
 
 \item Every real, symmetric matrix is \textbf{orthogonally diagonalizable}. 
+\end{itemize}
+
+\section*{Chapter 6.1 (Theory of Systems of LDEs)}
+
+\begin{itemize}
+\item If $a_{i,j}(x) \mbox{ and } g_i(x) \mbox{ are continuous on }(a,b)$ containing $x_0$, for $a\leq i \leq n, 1\leq j \leq n$, the IVP 
+$$Y'=A(x)Y+G(x), Y(x_0)=\left[
+\begin{array}{c}
+b_1 \\ 
+\vdots  \\ 
+b_n \\ 
+\end{array}
+\right]
+ $$
+ 
+has a unique solution on $(a,b)$ 
+
+\item The solutions to a homogenous system of first-order LDEs 
+$$Y' = A(x)Y$$ form a vector space (subspace) of dimension $n$ - the basis for the subspace is a fundamental set of solutions 
+
+\item A set of $n$ linearly independent solutions $Y_1, Y_2, ..., Y_n$ to a homogenous system of $n$ first-order LDEs is a fundamental set of solutions, often notated as $M$. % redundant? 
+
+\item The general solution to a homogenous system of 1st-order linear differential equations is written as 
+$$Y_H=MC$$ 
+
+\item If $Y_1, Y_2, ..., Y_n$ form a fundamental set of solutions to a system of homogenous first-order linear differential equations 
+$Y'=A(x)Y$
+...then ever solution to this nonhomogenous system is of the form: 
+$$Y = Y_H + Y_P = c_1Y_1 +...+ c_nY_n+Y_p=MC+Y_p$$
+
+\item If the \textbf{Wronskian} is inequal to 0, functions are linearly independent. If the Wronskian is 0 for some $x_0\in (a,b)$, then $Y_1, ... , Y_n$ is \textbf{linearly dependent}. \\ 
+This further implies that, for the fundamental set of solutions over $(a,b)$, $w(Y_1(x), Y_2(x),...,Y_n(x))\neq 0 \forall x\in (a,b)$
+\end{itemize}
+
+\section*{Chapter 6.2 (Constant Coefficient Homogenous Systems  (Diagonalizable)}
+
+\begin{itemize}
+
+\item A change of basis can simplify a system as well as a matrix. Diagonal systems are also easy to solve, and we like easy around here. \footnote{Hence Duke math.} 
+
+\item Diagonal systems are \textbf{decoupled}, which means that the variables we're solving for don't interact with each other, and can be solved for independently. 
 
 
-\end{enumerate}
+\item If $A,B$ are similar matrices with $B=P^{-1}AP$ where $P$ is an invertible $n\times n$ matrix. If $Z$ is a solution of $Y'=BY$, then $PZ$ is a solution of $Y'=AY$. \\
+Also, if $Z_1, Z_2, ..., Z_n$ forms a fundamental solution to $Y'=BY$, then $PZ_1,PZ_2,...,PZ_n$ forms a fundamental set of solutions to $Y'=AY$
 
+\item To rephrase this: if $M_B= [Z_1,  Z_2, ..., Z_n]$ is a matrix of fundamental solutions for $Y'=BY$, then 
+$$M_A = PM_B = [PZ_1, PZ_2,...,PZ_n]$$ 
+is a matreix of fundamental solutions to $Y'=AY$. 
 
+\item Suppose a matrix $A$ is diagonalizable and that there's some $P$ such that $D=P^{-1}AP$ is the diagonal matrix: 
+$$D = \left[
+\begin{array}{ccccc}
+d_1 & 0 & 0 & \dots & 0  \\ 
+0 & d_2 & 0 & \dots & 0 \\ 
+\vdots & \vdots & \vdots & & \vdots \\ 
+0 & 0 & 0 & \dots & d_n \\
+\end{array}
+\right]$$
 
+...which imples that the general solution to $Y'=AY$ is: 
+
+$$ P\left[
+\begin{array}{c}
+c_1e^{d_1x} \\
+c_2e^{d_2x} \\ 
+\vdots \\ 
+c_ne^{d_nx}
+\end{array}
+\right]
+$$
+\textit{Note: you'll really, really want to be familiar with this. In the book, look at page 303.}
+
+\item If $U(x) + iV(x)$ is a solution to $Y'=A(x)Y$, then $U(x) \mbox{ and } V(x)$ are solutions to $Y'=A(x)Y$. 
+
+\item If some $A$ is diagonalizable with 
+$$D = P^{-1}AP, A=PDP^{-1}$$ 
+...we can rewrite $$\vec{y}'=A\vec{y}$$ as 
+$$\vec{y}'=PDP^{-1}$$
+and multiply to obtain a diagonal system $\vec{y}' = PDP^{-1}\vec{y}$
+...which eventualy becomes a decoupled system $\vec{Z}'=D\vec{Z}$, which,
+after many more steps, becomes a fundamental set of solutions: 
+$\{ e^{\lambda_1x}\vec{e1},...e^{\lambda _nx}\vec{e_n}\}$
+
+\item Consider $\vec{y}'=A\vec{v}$, some diagonalizable $A$ with eigenvalues $\lambda_1,\lambda_2,...\lambda_n$ and eigenvectors $\vec{v_1},\vec{v_2},...,\vec{v_n}$. Then 
+$$\{e^{\lambda_1x}v_1,...,e^{\lambda_nx}\vec{v_n}\}$$
+forms a fundamental set of solutions. 
 
 \end{itemize}
+
+
+
 
 \end{document}
 
