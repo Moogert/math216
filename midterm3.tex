@@ -12,17 +12,25 @@
 \begin{document}
 \maketitle
 
+\section{Change of Basis}
+
+\begin{itemize}
+\item For some basis $v$ and the standard basis $s$, the matrix $[I]^s_v$ is the change of basis matrix $s \to v
+$
+
+\end{itemize}
+
 \section{Matrices for Linear Transformations}
 % as in section 5.3 in the book 
 \begin{itemize} 
 \item Suppose $T: V\to W$ is an LT; further suppose $v_1, ...,v_n$ form a basis $\alpha$ for $V$ and $w_1, ..., w_m$ form a basis $\beta$ for $W$. If we were to express $T(v_1),...,T(v_n)$ in terms of 
 $w_1,...,w_m$, we get a series of equations of the form: 
-$
+$$
 T(v_1) =a_{11}w_1+a_21w_2+...+a_{m1}w_{m} \\
 T(v_2) = a_{12}w_1+a_{22}w_2+...+a_{m2}w_m \\
 \vdots \\
 T(v_m)=a_{1n}w_1
-$
+$$
 
 \end{itemize}
 
@@ -74,6 +82,15 @@ The \textbf{properties of the Hermitian dot product }are:
 \end{enumerate}
 Functions satisfying these properties are called \textbf{Hermitian inner products.}
 
+\item With inner product spaces, we define the angle between two vectors as: 
+$$\theta = \cos^{-1}\frac{u \cdot v}{||u||||v||}$$
+
+\item One common (and important!) inner product is the $L^2$ inner product, which is defined as: 
+$$<f,g> = \int f\cdot g dx$$
+
+\item Magnitude with inner products is defined as 
+$$||v|| = \sqrt{<v,v>}$$
+
 \item With the Hermitian inner product, we also have the \textbf{Hermitian transpose:}
 $$A^*=\bar{A}^T$$ 
 Note that $\mbox{Hermitian transpose } \leftrightarrow \mbox{ Hermitian conjugate } \leftrightarrow \mbox{ adjoint }$. 
@@ -91,6 +108,8 @@ If $A,B$ are similar by $BP^{-1}AP$ and $P$ is orthogonal, then $A, B$ are ortho
 
 \item Every real, symmetric matrix is \textbf{orthogonally diagonalizable}. 
 \end{itemize}
+
+\section*{}
 
 \section*{Chapter 6.1 (Theory of Systems of LDEs)}
 
@@ -180,7 +199,16 @@ forms a fundamental set of solutions.
 
 \end{itemize}
 
+\section*{Diagonal matrices}
 
+\begin{itemize}
+\item A matrix can be \textbf{\textit{diagonalized}} iff there exists a basis $\beta$ for $\mathbb{R}^n$ made of eigenvectors. The entries of the diagonal matrix are the eigenvalues. 
+
+\item For a diagonal matrix $D$: 
+$$D = P^{-1}AP$$
+
+
+\end{itemize}
 
 
 \end{document}
